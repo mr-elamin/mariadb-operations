@@ -1,0 +1,14 @@
+# ubuntu-command-central-service.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: ubuntu-command-central
+  namespace: admin
+spec:
+  selector:
+    app: ubuntu-command-central
+  ports:
+  - protocol: TCP
+    port: 22
+    targetPort: 22
+  type: LoadBalancer
